@@ -1,0 +1,20 @@
+[project]
+name = "arena_planners_sonic"
+version = "0.0.0"
+description = "SoNIC (constrained-RL + ACI + GST prediction) planner adapter for the arena_planners bridge."
+requires-python = ">=3.10"
+dependencies = [
+    "arena_planners",
+    "torch>=2.2,<2.3",
+    "numpy>=1.21,<2",
+]
+
+[tool.uv.sources]
+arena_planners = { git = "https://github.com/arena-planners/arena_planners.git", branch = "jazzy", subdirectory = "arena_planners" }
+
+[tool.setuptools]
+packages = []
+py-modules = []
+
+[tool.ruff.lint.isort]
+known-first-party = ["srnn_net"]

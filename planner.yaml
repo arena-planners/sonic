@@ -1,0 +1,36 @@
+action_type: omnidirectional
+sensor_needs: []
+obs_policy: latest_only
+controls_orientation: false
+
+depends:
+  global_plan: true
+
+observations:
+  aliases:
+    robot_pose: robot_pose_from_tf
+
+  datasources:
+    robot_pose_from_tf:
+      type: RobotPoseTFGenerator
+      params: {}
+
+    robot_state:
+      type: nav_msgs/Odometry
+      params:
+        topic: odom
+
+    pedestrians:
+      type: arena_people_msgs/Pedestrians
+      params:
+        topic: arena_peds
+
+    goal_pose:
+      type: geometry_msgs/PoseStamped
+      params:
+        topic: goal_pose
+
+    global_plan:
+      type: nav_msgs/Path
+      params:
+        topic: plan

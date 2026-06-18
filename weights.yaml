@@ -1,0 +1,10 @@
+files:
+  - repo: arena-rosnav/sonic
+    filename: policy.pt
+    dest: model/policy.pt
+  - repo: arena-rosnav/sonic
+    filename: gst_predictor.pt
+    dest: model/gst_predictor.pt
+  - repo: arena-rosnav/sonic
+    filename: gst_args.pickle
+    dest: model/gst_args.pickle
