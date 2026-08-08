@@ -8,6 +8,7 @@ depends:
 
 observations:
   aliases:
+    goal_pose: subgoal_from_plan
     robot_pose: robot_pose_from_tf
 
   datasources:
@@ -34,3 +35,13 @@ observations:
       type: nav_msgs/Path
       params:
         topic: plan
+
+    costmap:
+      type: nav_msgs/OccupancyGrid
+      params:
+        topic: global_costmap/costmap
+
+    subgoal_from_plan:
+      type: SubgoalGenerator
+      params:
+        lookahead: 2.0
