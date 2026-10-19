@@ -2,6 +2,7 @@ files:
   - repo: arena-rosnav/sonic
     filename: policy.pt
     dest: model/policy.pt
+    sha256: 8d6973526d2b5b14dc014ed9c46626e20657666b6d830b0e2a58e700119636a0
   - repo: arena-rosnav/sonic
     filename: gst_predictor_state.pt
     dest: model/gst_predictor.pt
@@ -9,3 +10,4 @@ files:
   - repo: arena-rosnav/sonic
     filename: gst_args.pickle
     dest: model/gst_args.pickle
+    sha256: bd979d84b241dbb4db1f3e0b8457940ea7cd92fc1369e1f42ccabc22bb35ff1e
